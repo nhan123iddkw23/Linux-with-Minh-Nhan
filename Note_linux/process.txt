@@ -1,0 +1,8 @@
+Chương trình (program): Chương trình là 1 nhóm các câu lệnh thực thi 1 nhiệm vụ cụ thể
+Tiến trình (process): Tiến trình là chương trình ang thực thi và sử dung tài nguyên hệ thống
+
+- Tham số môi trường "void main(int argc, char *argv[])
+- Process image: Gồm nhiều page được lưu trên virtual memory.
+- RAM: gồm nhiều frame. 1 page = 1 frame.
+- getpid() -> PID của process , getppid() -> pid của parent của process.
+- ps -aux | grep exam

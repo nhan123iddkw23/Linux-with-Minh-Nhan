@@ -1,0 +1,14 @@
+- Bộ nhớ -> RAM, Bộ nhớ lưu trữ -> ổ cứng(HHD,SSD,SD Card, USB, Flash).
+- Bộ nhớ cache trung gian giữa CPU và RAM, RAM vàổ cứng
+- CPU <-> cache <-> RAM <-> cache <-> ổ cứng(HHD, SSD, SD Card, USB, FLASH). 
+- Cache là cơ chế giúp tang tuổi thọ và tốd dộ ghi vào ổ cứng(HHD, SSD, SD Card, USB, FLASH). 
+- System Call(Lời gọi hệ thống) là 1 cơ chế cho phép các chương trình APP(user-space) yêu cầu các dịch vụ từ hệ điều hành(kernel-space). Dây là cách các chương trình tương tác với phần cứng và tài nguyên hệ thống một cách an toàn qua kernel.
+
+- Trong Linux hành động dọc hoặc ghi vapf 1 file ở trong HDD or SSD sẽ thao tác: open() -> read() or write() -> close().
+
+
+Synchrounous: đồng bộ
+
+Asynchrouns: bất đồng bộ
+
+Sử dung flock hoặc fcnt để giải quyết vấn đề bất đồng bộ khi 2 tiến trình dọc, ghi 1 file.

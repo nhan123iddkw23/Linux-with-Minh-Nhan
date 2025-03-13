@@ -1,0 +1,20 @@
+Yocto Project
+
+Bulid system: Buildroot là 1 trong các build system. Build ->  Rootfs Sử dung Makefile và Kconfig
+
+	      Kbuild -> build ra u-boot hoặc kernel.
+
+	      Open Embedded: Ra đời sau. Build -> ra 1 phiên bản phân phối của Linux going như các file .iso
+SDK: Software development kit
+Note: Yocto không phải là 1 bản phân phối của Linux
+      Yocto không phải là 1 build system
+      Yocto không phải là 1 framework
+      Yocto không phải là 1 tool.
+Yocto: Target -> Rootfs, u-boot, kernel
+Yocto project = Poky + Tools + Upstream
+-	Poky là 1 bản phân phối Linux được phát triển bởi Yocto Project. Nó cung cấp một bộ công
+cụ và cấu hình để xây dung các hệ thống Linux tùy chinh trên các thiết bị nhúng. Thành phần chính là BitBake và Metadata.
+-	Bitbake: là 1 công cụ biên dịch (build tool)
+-	Metadata: là các tệp cấu hình và thông tin mô tả cách xây dung các gói phần mềm và hình ảnh hệ thống.
+-	Upstream: Dự án A rẽ nhánh sang dự án B dự án B rẽ ránh sang dự án C lúc đó Dự án C gọi là Upstream của dự án A,B.
+-		

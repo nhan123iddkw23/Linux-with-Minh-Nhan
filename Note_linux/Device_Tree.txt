@@ -1,0 +1,46 @@
+Device tree
+
+
+Device tree là gì: Là 1 cấu trúc dữ liệu dung de mô tả phần cứng của một hệ thống máy tính,
+đặc biệt là trong các hệ thống nhúng và Linux. Nó cho phép hệ điều hành nhận biết các thành phần
+cứng mà không cần phải thay đổi mã nguồn cuả Kernel.
+
+Sử dung ngôn ngữ XML
+
+Các file dtsi(include) -> .h
+-	Chứa các thông tin chung của SOC
+Các file dts(source)  -> .c
+-	Chứa thông tin private của board
+Các file dtb
+-	
+
+BBB: 
+-	Duy nhất 1 file dts
+-	có thể có nhiều file dtsi
+dtc -> device tree compiler.
+
+dts + dtsi  qua quá trình dtc(device tree compiler) -> dtb
+
+file: am335x.dtsi -> mô tả các module trong SOC
+file: am335x-bone-common.dtsi -> mô tả các module trong BBB black, BBB green, BBB blue.
+file: am335x-boneblack-common.dtsi -> Các thành phan chung của BB Black có wireless và không có wireless.
+file: am335x-boneblack.dts -> Các thành phần chỉ BBB black mới có.
+
+Device node: Là 1 block sẽ mô tả thông tin cho 1 phần cứng cụ thể (vd: module watchdog, clock, gpio)
+-	node name: theo quy tắc của C. Sau tên nốt là dâu '@' và cuối cùng là địa chỉ vật lý
+-	Trường thông tin gồm 2 khối: Property of node = Property value
+
+
+Example
+
+wdt@0666 {
+	field-a = "abcxyz";
+};
+
+
+Trong các node có thể có các node con 
+Field compatible: Chưa một hoặc nhiều chuỗi kí tự định danh các loại thiết bị mà driver có thể hỗ trợ.
+Điều này cho phép kernel xác định driver nào sẽ được sử dung cho thiết bị cụ thể.
+
+Example:
+	compatiple = "fsl,s32v234-wdt", "fsl,sac58r-wdt";

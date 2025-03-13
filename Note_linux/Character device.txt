@@ -1,0 +1,12 @@
+Character device:  Major( Số hiệu chính) minor( Sô hiệu phụ) là device number của thiết bị. Giúp xac dinn driver tương ứng của thiêt bị.
+ Ví dụ Drive USB: Major 17 device 0 Minor 0
+ device 1 Minor 1
+ device 2 Minor 2
+Dữ liệu dược gửi theo byte
+
+
+Tao device number (cấp phát động hoặc cấp phát tĩnh)
+
+Tài nguyên nào được khởi tao ở init sẽ giải phóng ở exit. Tài nguyên naof khởi tao trước sẽ bị giải phóng sau.
+
+

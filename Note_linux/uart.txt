@@ -1,0 +1,26 @@
+Device tree
+
+&uart1
+{
+	pinctrl-names = "default";
+	pinctrl-0 = <&pwm_1_pin>;
+	status = "okay";
+};
+
+&uart1
+{
+	serial-demo
+	{
+		compatible = "serial-user-demo";
+	};
+};
+
+
+&am33xx_pinmux{
+	uart1_pin: uart1_pin {
+		pin-single,pins = <
+			AM33XX_PADCONF(AM335X_PIN_UART1_TXD,PIN_OUTPUT_PULLDOWN,MUX_MODE0)
+			AM33XX_PADCONF(AM335X_PIN_UART1_RXD,PIN_INPUT_PULLUP,MUX_MODE0);
+		>;
+	};
+};

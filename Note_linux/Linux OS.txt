@@ -1,0 +1,16 @@
+
+Các thành phần của Linux
+-	Toolchain
+-	Bootloader
+-	Kernel
+-	Root filesystem
+
+Toolchain có 3 thành phần chính
+-	Binutils
+-	GNU compiler Collection (GCC)
+-	C library
+
+Có 2 dạng toolchain
+-	Native
+-	Cross
+U-boot

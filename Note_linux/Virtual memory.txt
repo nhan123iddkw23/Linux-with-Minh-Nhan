@@ -1,0 +1,6 @@
+Virtual memory
+
+Chia làm 2 phần
+User space virtual address
+Kernel space virtual address
+Truy cập vào kernel address cần chế độ đặc quyền (root)

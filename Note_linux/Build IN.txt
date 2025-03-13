@@ -1,0 +1,29 @@
+Build IN
+
+Giới thiệu: cơ sở dữ lieu cấu hình là tập hợp các tùy chọn cấu hình được sắp xếp theo cấu trúc cây.
+-	 Mỗi dòng đều bắt đầu bang 1 từ khóa và theo sau bởi đối số "config" bắt đầu bang một mục nhập cấu hình mới.
+-	Mỗi mục menu có thể có một số thuộc tính. "bool" "tristate" "string" "hex" "int"
+-	Example: bool "Networking support"
+-	Example: bool
+		 prompt "Networking support"
+
+
+Cấu trúc MENU:
+
+  
+	menu "Network device support"
+	      depends on NET
+	config NETDEVICES
+	   . . .
+	endmenu
+
+Kconfig Systax
+
+-	config
+-	menuconfig
+-	choice/endchoice
+-	comment
+-	menu/endmenu
+-	if/endif
+-	source
+
